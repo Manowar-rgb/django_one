@@ -8,5 +8,5 @@ from .models import Bd
 # Create your views here.
 
 def index(request):
-    bbs = Bd.objects.order_by('-published')
+    bbs = Bd.objects.all()
     return render(request, 'bboard/index.html', {'bbs': bbs})
